@@ -1,0 +1,19 @@
+version: '3'
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports: 
+      - 8000:5000
+    restart: on-failure
+
+  db:
+    image: postgres
+    restart: always
+    environment: 
+      POSTGRES_PASSWORD: "banco"
+    ports: 
+      - 5432:5432
+    volumes: 
+      - /home/luciano/Documetos/UFU/ASA2/bdPostgres:/var/lib/postgresql/data

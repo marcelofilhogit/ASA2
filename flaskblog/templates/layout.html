@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Retros, a loja retro</title>
+        <link rel="icon" class="img-fluid" href="{{ url_for('static', filename='img/logo.png') }}">
+        <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+        <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+        <link href="{{ url_for('static', filename='lib/font-awesome-4.7.0/css/font-awesome.min.css') }}" rel="stylesheet">
+    </head>
+
+    <body>
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark barra-top rounded">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='img/logo.png') }}" class="img-fluid" width="50px"></a>
+    
+                <div class="navbar-collapse collapse w-100 order-3 dual-collapse2" id="navbarTogglerDemo03">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="{{ url_for('home') }}">Home</a>
+                        </li>
+                    </ul>
+                </div>            
+            </div>
+        </nav><br><br><br>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        {% block content %} {% endblock %}
+
+        <div class="rodape">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12" style="font-size: 50px;">
+                        <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </div>
+                </div>
+
+                Retros Store / CNPJ: 00.786.374/0001-30 / Inscrição Estadual: 89.647.01-0 / Endereço Avenida Joaõ Naves de Avila, 2121 - 38408-014 - Uberlândia, MG -  / atendimento@Retrosstore.com
+            </div>
+        </div>
+
+        <script src="{{ url_for('static', filename='js/jquery-3.3.1.slim.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    </body>    
+</html>

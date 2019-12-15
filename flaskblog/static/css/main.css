@@ -1,0 +1,124 @@
+.barra-top
+{
+    background-color: #fcca64;
+}
+
+/* .my-item
+{
+    color: #f04e3e;
+} */
+
+/* .icone{
+    padding: 10px;
+    color: #f04e3e;
+    font-size: 20px;
+} */
+
+.nav-link
+{
+    color: #f04e3e!important;
+}
+
+.nav-link:hover
+{
+    color: #43ADA5!important;
+}
+
+/* .btn-outline-success {
+    color: #f04e3e;
+    border-color: #f04e3e;
+} */
+
+/* .btn-outline-success:hover {
+    color: #fff;
+    background-color: #f04e3e;
+    border-color: #ffffff;
+    color: #fcca64;
+} */
+
+/* .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 10rem;
+    padding: 0.5rem 0;
+    margin: 0.125rem 0 0;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+}
+
+.my-slide
+{
+    padding-top: 3px;
+}
+.produtos-vend
+{
+    color: #fcca64;
+    padding: 20px 20px 20px 0px;
+}
+.produtos
+{
+    padding: 20px;
+    color: #f04e3e;
+    font-weight: bold;
+}
+.price
+{
+    font-weight: bold;
+    font-size: 18px;
+    color: #f04e3e;
+}
+.cadastro 
+{
+    background-color: #fcca64;
+    padding: 10px 10px 20px 10px;
+    color: #f04e3e;
+}
+.formulario
+{
+    width: 1000px;
+} */
+.rodape
+{
+    background-color: #fcca64;
+    margin-top: 20px;
+    padding-top: 25px;
+    height: 180px;
+    color: #f04e3e;
+}
+.rodape-ico
+{
+    padding: 15px;
+    padding-top: 45px;
+    font-size: 30px;
+}
+.final-rodape
+{
+    padding-top: 15px;
+    font-size: 12px;
+}
+.apresentacao
+{
+    font-size: 25px;
+    color: #f04e3e;
+    padding: 20px;
+}
+
+.active 
+{
+    color: #43ADA5!important;
+}
+
+.card:hover {
+    cursor: pointer;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.30);
+}
