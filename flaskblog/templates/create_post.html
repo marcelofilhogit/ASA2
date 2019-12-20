@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="container py-3">
+        <form action="/registerPost" method="POST" role="form">
+            <legend class="border-bottom mb-4">
+                Novo post
+            </legend>
+            <div class="form-group">
+              <label>Título</label>
+              <input type="text" class="form-control" name="title">
+            </div>
+            <div class="form-group">
+              <label>Conteúdo</label>
+              <textarea type="text" class="form-control" rows="5" name="content"></textarea>
+            </div>
+            <div class="form-group">
+                <a href="/account" class="btn btn-outline-danger">Cancelar</a>
+                <button type="button" class="btn btn-outline-success" onclick="registerPost()">Salvar</a>
+            </div>
+        </form>
+    </div>
+
+    <script type="text/javascript">
+        function registerPost() {
+            $.ajax({
+                url: '/registerPost',
+                data: $('form').serialize(),
+                type: 'POST',
+                success: function(response) {
+                    console.log(response);
+                },
+                error: function(error) {
+                    console.log(error);
+                }
+            });
+        }
+    </script>
+
+{% endblock content %}

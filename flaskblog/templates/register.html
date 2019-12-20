@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="container">
+        <div class="content-section py-3">
+            <form action="/registerUser" method="POST" role="form">
+                <legend class="border-bottom mb-4">
+                    Entrar
+                </legend>
+                <div class="form-group">
+                  <label>Username</label>
+                  <input type="text" class="form-control" name="username">
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" class="form-control" name="email">
+                </div>
+                <div class="form-group">
+                    <label>Senha</label>
+                    <input type="password" class="form-control" name="password">
+                </div>  
+                <button type="button" class="btn btn-primary" onclick="registerUser()">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function registerUser() {
+            $.ajax({
+                url: '/registerUser',
+                data: $('form').serialize(),
+                type: 'POST',
+                success: function(response) {
+                    console.log(response);
+                },
+                error: function(error) {
+                    console.log(error);
+                }
+            });
+        }
+    </script>
+{% endblock content %}

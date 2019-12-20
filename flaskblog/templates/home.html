@@ -29,6 +29,27 @@
     </div>
 
     <div class="container">
+        <div class="row">
+            <h2 class="produtos">Posts em destaques</h2>
+        </div>
+        
+        <div class="row justify-content-center text-center">
+
+            <!-- {% for post in posts %}
+                <a href="{{ url_for('post', post_id=post.id) }}" class="card mb-4 mx-3" style="text-decoration:none; width: 20rem;">
+                    <div class="thumbnail">
+                        <img src="{{ url_for('static', filename='img/produto1.png') }}" alt="Coworkings" style="width: 100%; height: 40vh; object-fit: cover;">
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text subTitulo text-dark h2">{{ post.title }}</p>
+                        <p class="text-dark">Autor do post: {{ post.author.username }}</p>
+                        <p class="card-text text-dark">{{ post.content[0:50] }}...</p>
+                        <button class="btn btn-outline-primary">Ler mais</button>
+                    </div>
+                </a>
+            {% endfor %} -->
+    
+        </div>
     </div>
 
 {% endblock content %}

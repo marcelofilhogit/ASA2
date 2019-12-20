@@ -7,6 +7,6 @@ RUN \
     pip install -r requirements.txt --no-cache-dir && \
     pip install gunicorn --no-cache-dir
 ENV FLASK_APP run.py
-#ENV FLASK_RUN_HOST 0.0.0.0
 EXPOSE 5000
 CMD flask run --host=0.0.0.0
+# CMD ["flask", "run"]

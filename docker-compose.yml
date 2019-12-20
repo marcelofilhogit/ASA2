@@ -3,17 +3,28 @@ services:
   web:
     build:
       context: .
+      # container_name: web-flask-container
       dockerfile: Dockerfile
     ports: 
       - 8000:5000
     restart: on-failure
+    depends_on: 
+        - postgres
+    environment:
+      - DBUSER=postgres
+      - DBPASS="banco"
+      - DBHOST=postgres        
+      - DBNAME=postgres
 
-  db:
+  postgres:
     image: postgres
+    # container_name: db-postgres-container
     restart: always
     environment: 
       POSTGRES_PASSWORD: "banco"
+      POSTGRES_DATABASE: postgres
+      POSTGRES_USER: postgres
     ports: 
-      - 5432:5432
+      - "5432:5432"
     volumes: 
-      - /home/luciano/Documetos/UFU/ASA2/bdPostgres:/var/lib/postgresql/data
+      - /home/marcelo/Downloads/Trabalho/ASA2/bdPostgres:/var/lib/postgresql/data
